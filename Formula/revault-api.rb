@@ -1,27 +1,27 @@
 class RevaultApi < Formula
   desc "Stable native API for reVault lockboxes and vaults"
   homepage "https://github.com/onepub-dev/reVault"
-  version "0.1.0"
+  version "0.3.11"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.1.0/revault-api-native-0.1.0-macos-aarch64.tar.gz"
-      sha256 "58d471baaf0b1439c8f6f4cc7ea893c2b7a67560a6eb2dcf69006fb371b96848"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.11/revault-api-native-0.3.11-macos-aarch64.tar.gz"
+      sha256 "b37d52889cb2e46a819fe04354c41d88e866b0b8271eed7309a4e0f2adac981e"
     else
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.1.0/revault-api-native-0.1.0-macos-x86_64.tar.gz"
-      sha256 "fb751879a8efe6775b703b12d1f0078886d56b29d5e70fc4d04fd387371bf056"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.11/revault-api-native-0.3.11-macos-x86_64.tar.gz"
+      sha256 "319a72ddc38a6814867f2f8cd0fa4749ad0c696ddb7bfe04d281aec50463cb0e"
     end
   end
 
   on_linux do
     depends_on "dbus"
     if Hardware::CPU.arm?
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.1.0/revault-api-native-0.1.0-linux-aarch64-gnu.tar.gz"
-      sha256 "b24c7d04b7094aa5cc3515bbb9cc8f1cf85360118a0c620a0479884628a95c78"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.11/revault-api-native-0.3.11-linux-aarch64-gnu.tar.gz"
+      sha256 "a9278a78ebd2138c31579c433339e66f6eb1fcaedfad7e2444edfdaed9e16332"
     else
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.1.0/revault-api-native-0.1.0-linux-x86_64-gnu.tar.gz"
-      sha256 "796470482bb0cd1be521bd357c051c8bc2c03dc566a65f9e8e5864a9c2888826"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.11/revault-api-native-0.3.11-linux-x86_64-gnu.tar.gz"
+      sha256 "463447f8ae7648204432cd8b81bb0328ab57ae2a397544a1619a806ae6747a00"
     end
   end
 
@@ -33,7 +33,7 @@ class RevaultApi < Formula
   test do
     (testpath/"abi.c").write <<~EOS
       #include <revault_api.h>
-      int main(void) { return api_abi_version() == 1 ? 0 : 1; }
+      int main(void) { return api_abi_version() == 3 ? 0 : 1; }
     EOS
     system ENV.cc, "abi.c", "-I#{include}", "-L#{lib}", "-lrevault_api", "-o", "abi"
     system "./abi"
