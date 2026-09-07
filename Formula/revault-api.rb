@@ -1,27 +1,27 @@
 class RevaultApi < Formula
   desc "Stable native API for reVault lockboxes and vaults"
   homepage "https://github.com/onepub-dev/reVault"
-  version "0.3.13"
+  version "0.3.14"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.13/revault-api-native-0.3.13-macos-aarch64.tar.gz"
-      sha256 "fe3a491ca1565249665ff62608f16758b9b14c85ab9c87a8287c29bafb9ea288"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.14/revault-api-native-0.3.14-macos-aarch64.tar.gz"
+      sha256 "d766471178e7314cf72de8e75c619bcdaf2b7f2eecca6718f0248763e392fa13"
     else
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.13/revault-api-native-0.3.13-macos-x86_64.tar.gz"
-      sha256 "392a3c0055d3e03fc66837771acffb765175c1ba92bb94319af6d850b4646e0c"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.14/revault-api-native-0.3.14-macos-x86_64.tar.gz"
+      sha256 "dd8405a0913069fa12534fa70765dcd29f39731750519962830fd6bf0669dad0"
     end
   end
 
   on_linux do
     depends_on "dbus"
     if Hardware::CPU.arm?
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.13/revault-api-native-0.3.13-linux-aarch64-gnu.tar.gz"
-      sha256 "791af87d1b116e50106763664be9f96fddb1142b89c76f4c23e7c0a6a3e84550"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.14/revault-api-native-0.3.14-linux-aarch64-gnu.tar.gz"
+      sha256 "cdc8dc1527f5ede46cedb9b02f3bab007961bfbfff9620392fc0057965fafe41"
     else
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.13/revault-api-native-0.3.13-linux-x86_64-gnu.tar.gz"
-      sha256 "8cba3b2eb309734ac6422d4d2834e8881242016ea0a1aa44ccde0a464d7e81a9"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.3.14/revault-api-native-0.3.14-linux-x86_64-gnu.tar.gz"
+      sha256 "274e042bd788eac8a741250768f6825458ccee42d4d5fb4159e875e71a6d8226"
     end
   end
 
