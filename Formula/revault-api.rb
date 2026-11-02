@@ -1,27 +1,27 @@
 class RevaultApi < Formula
   desc "Stable native API for reVault lockboxes and vaults"
   homepage "https://github.com/onepub-dev/reVault"
-  version "0.6.1"
+  version "0.6.2"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.6.1/revault-api-native-0.6.1-macos-aarch64.tar.gz"
-      sha256 "1f680cd0e9758287620dd4ce11352d9a53b7fdd2c50586c69bf2bfd7540e5abe"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.6.2/revault-api-native-0.6.2-macos-aarch64.tar.gz"
+      sha256 "0e25b53ec596cdca24b1042e0fd16133a27e09dda2e5160e889493c72068a527"
     else
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.6.1/revault-api-native-0.6.1-macos-x86_64.tar.gz"
-      sha256 "af51245640a41503e98ab48ccb4c612e2cf97a4c405bf9eb77e4be800ee89ee4"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.6.2/revault-api-native-0.6.2-macos-x86_64.tar.gz"
+      sha256 "a3a08694cc68ad0f1ad7e06e8f7fc5ce8e6b11c5674e1ba626b9f5268b9ff506"
     end
   end
 
   on_linux do
     depends_on "dbus"
     if Hardware::CPU.arm?
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.6.1/revault-api-native-0.6.1-linux-aarch64-gnu.tar.gz"
-      sha256 "3cef8fa813ec48fe1c20e9df831a49b45d79b55b5175cd67e92cd1a3c2606e21"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.6.2/revault-api-native-0.6.2-linux-aarch64-gnu.tar.gz"
+      sha256 "1177a624657650c16a5bb41432007c423a539c4c4a827e7f415ccaa2e5f837e8"
     else
-      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.6.1/revault-api-native-0.6.1-linux-x86_64-gnu.tar.gz"
-      sha256 "76ff5182cda45074b5ab2b1d9670245a654ecd5d2d2c5bff71f3756df63a8d67"
+      url "https://github.com/onepub-dev/reVault/releases/download/revault-api-v0.6.2/revault-api-native-0.6.2-linux-x86_64-gnu.tar.gz"
+      sha256 "028fc5d2f6b6b40e98f38a96cc6479d7e85c03fb44b801bebbe8d000cde9ea3f"
     end
   end
 
